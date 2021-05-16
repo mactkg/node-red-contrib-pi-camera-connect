@@ -37,18 +37,12 @@ node-red-node-typescript-starter/
  └──tsconfig.runtime.watch.json      * config for watching and incremental building the runtime side of the nodes
 ```
 
-## Getting Started
-
-1. Generate a new GitHub repository by clicking the `Use this template` button at the top of the repository homepage, then clone your new repo. Or you might just clone this repo: `git clone https://github.com/alexk111/node-red-node-typescript-starter.git` and cd into it: `cd node-red-node-typescript-starter`.
-2. This project is designed to work with `yarn`. If you don't have `yarn` installed, you can install it with `npm install -g yarn`.
-3. Install dependencies: `yarn install`.
-
 ## Adding Nodes
 
 You can quickly scaffold a new node and add it to the node set. Use the following command to create `my-new-node-type` node:
 
 ```
-yarn add-node my-new-node-type
+npm run add-node my-new-node-type
 ```
 
 The node generator is based on mustache templates. At the moment there are three templates available:
@@ -60,54 +54,19 @@ The node generator is based on mustache templates. At the moment there are three
 To generate a node using a template, specify it as the third argument:
 
 ```
-yarn add-node my-new-node-type blank
+npm run add-node my-new-node-type blank
 ```
 
 or
 
 ```
-yarn add-node my-new-node-config config
+npm run add-node my-new-node-config config
 ```
 
 ### Adding Node Templates
 
 If you want to make your own template available, add it to `./utils/templates/`.
 
-## Developing Nodes
+## Acknowledgments
 
-Build & Test in Watch mode:
-
-```
-yarn dev
-```
-
-## Building Node Set
-
-Create a production build:
-
-```
-yarn build
-```
-
-## Backers 💝
-
-[[Become a backer](https://mynode.alexkaul.com/gh-donate)]
-
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/0/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/0/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/1/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/1/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/2/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/2/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/3/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/3/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/4/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/4/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/5/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/5/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/6/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/6/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/7/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/7/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/8/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/8/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/9/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/9/profile)
-
-## Testing Node Set in Node-RED
-
-[Read Node-RED docs](https://nodered.org/docs/creating-nodes/first-node#testing-your-node-in-node-red) on how to install the node set into your Node-RED runtime.
-
-## License
-
-MIT © Alex Kaul
+- Node-RED Node TypeScript Starter - Alex Kaul

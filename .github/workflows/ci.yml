@@ -16,10 +16,19 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: yarn, lint, build and test
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ matrix.node-version }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: npm ci
+        run: npm ci
+      - name: lint, build and test
         run: |
-          yarn
-          yarn lint
-          yarn build
-          yarn test
+          npm run lint
+          npm run build
+          npm run test
