@@ -1,7 +1,7 @@
 {
-  "name": "node-red-contrib-MY_NODESET_NAME",
-  "version": "0.2.3",
-  "description": "Description of the node set here",
+  "name": "node-red-contrib-pi-camera-connect",
+  "version": "0.0.1",
+  "description": "Node-RED node to use pi-camera-connect(capture and stream RasPi camera data directly)",
   "scripts": {
     "add-node": "node ./utils/add-node.js",
     "copy": "copyfiles -u 2 \"./src/nodes/**/*.{png,svg}\" \"./dist/nodes/\"",
@@ -20,7 +20,7 @@
   "license": "MIT",
   "node-red": {
     "nodes": {
-      "transform-text": "./dist/nodes/transform-text/transform-text.js"
+      "pi-camera-connect": "./dist/nodes/pi-camera-connect/pi-camera-connect.js"
     }
   },
   "devDependencies": {
@@ -63,5 +63,8 @@
     "testMatch": [
       "**/__tests__/**/*.test.ts"
     ]
+  },
+  "dependencies": {
+    "pi-camera-connect": "^0.3.4"
   }
 }
