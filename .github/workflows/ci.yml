@@ -27,8 +27,7 @@ jobs:
             ${{ runner.os }}-
       - name: npm ci
         run: npm ci
-      - name: lint, build and test
+      - name: lint, build
         run: |
           npm run lint
           npm run build
-          npm run test
